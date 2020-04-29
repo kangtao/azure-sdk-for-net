@@ -210,6 +210,16 @@ namespace Azure.Core.Testing
         {
             return Random.Next().ToString();
         }
+		
+		public string GenerateId(int maxValue)
+        {
+            return Random.Next(maxValue).ToString();
+        }
+		
+		public string GenerateId(int minValue, int maxValue)
+        {
+            return Random.Next(minValue, maxValue).ToString();
+        }
 
         public string GenerateAssetName(string prefix, [CallerMemberName]string callerMethodName = "testframework_failed")
         {
